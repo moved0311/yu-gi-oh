@@ -1,2 +1,20 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* hide scrollbar but allow scrolling */
+pre {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+pre::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
