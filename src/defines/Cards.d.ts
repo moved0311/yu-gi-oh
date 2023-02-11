@@ -6,5 +6,8 @@ namespace Card {
     name_en: string;
     name_ja: string;
     desc: string;
+    level: number;
+    atk: number;
+    def: number;
   };
 }

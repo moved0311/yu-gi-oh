@@ -19,7 +19,7 @@ const Table: FC<TableProps> = ({ columns, data }) => {
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
-              <th {...column.getHeaderProps({ style: { minWidth: column.minWidth || "200px", width: column.width, maxWidth: column.maxWidth } })}>
+              <th {...column.getHeaderProps({ style: { minWidth: column.minWidth || "50px", width: column.width, maxWidth: column.maxWidth } })}>
                 {column.render("Header")}
               </th>
             ))}
