@@ -1,16 +1,12 @@
 import { useMemo } from "react";
 import type { FC } from "react";
-import fuzzysort from "fuzzysort";
 import Table from "components/Table";
-import parse from "html-react-parser";
 
 type Props = {
   data: Card.Info[];
 };
 
 const SearchResult: FC<Props> = ({ data = [] }) => {
-  console.log(data);
-
   const columns = useMemo(
     () => [
       {
@@ -30,6 +26,7 @@ const SearchResult: FC<Props> = ({ data = [] }) => {
     []
   );
 
+  // TODO: 名稱highligh顯示
   // let result = fuzzysort.single("query", "some string that contains my query.") || undefined;
   // {parse(fuzzysort.highlight(result, "<b>", "</b>") || "")}
 

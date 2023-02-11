@@ -4,14 +4,13 @@ import TextField from "@mui/material/TextField";
 import fuzzysort from "fuzzysort";
 import throttle from "lodash.throttle";
 import SearchResult from "components/SearchResult";
-import data from "assets/cards.json";
+import useCardsDetails from "hooks/useCardsDetails";
 import "./App.css";
-
-const cards = data as Card.Info[];
 
 function App() {
   const [form, setForm] = useState<{ name: string }>({ name: "" });
   const [filter, setFilter] = useState<Card.Info[]>([]);
+  const { cards } = useCardsDetails();
 
   const onChange = throttle((event: React.ChangeEvent<HTMLInputElement>) => {
     const id = event.target.id;
