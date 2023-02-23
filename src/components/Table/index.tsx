@@ -1,14 +1,10 @@
-import type { CSSProperties, FC } from "react";
+import type { FC } from "react";
 import { useTable } from "react-table";
 import type { Column } from "react-table";
 
 type TableProps = {
   columns: Column[];
   data: Card.Info[];
-};
-
-type CustomType = {
-  styles: CSSProperties;
 };
 
 const Table: FC<TableProps> = ({ columns, data }) => {
