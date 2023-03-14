@@ -45,11 +45,21 @@ const SearchResult: FC<Props> = ({ data = [] }) => {
         Header: "攻擊",
         accessor: "atk",
         styles: { textAlign: "center" },
+        Cell: ({ value }: any) => {
+          if (value === -2) return "?";
+
+          return value;
+        },
       },
       {
         Header: "守備",
         accessor: "def",
         styles: { textAlign: "center" },
+        Cell: ({ value }: any) => {
+          if (value === -2) return "?";
+
+          return value;
+        },
       },
       {
         Header: "效果",
